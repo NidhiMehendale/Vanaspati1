@@ -1,0 +1,386 @@
+/* Custom styles for Nursery Plant Management System */
+.App {
+  text-align: left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d5a27;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3f1c;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Hero section animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-image img {
+  animation: fadeInRight 1s ease-out, float 3s ease-in-out infinite;
+}
+
+/* Plant card hover effects */
+.plant-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.plant-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 35px rgba(45, 90, 39, 0.15) !important;
+}
+
+/* Feature icons animation */
+.feature-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-icon:hover {
+  transform: scale(1.1);
+  background-color: #2d5a27 !important;
+}
+
+.feature-icon:hover .fa-icon {
+  color: white !important;
+}
+
+/* Navbar enhancements */
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Button hover effects */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Loading spinner customization */
+.spinner-border.text-success {
+  color: #2d5a27 !important;
+}
+
+/* Custom badge styles */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Form enhancements */
+.form-control:focus {
+  border-color: #2d5a27;
+  box-shadow: 0 0 0 0.2rem rgba(45, 90, 39, 0.25);
+}
+
+.form-select:focus {
+  border-color: #2d5a27;
+  box-shadow: 0 0 0 0.2rem rgba(45, 90, 39, 0.25);
+}
+
+/* Progress bar customization */
+.progress-bar {
+  transition: width 0.6s ease;
+}
+
+/* Table hover effects */
+.table tbody tr:hover {
+  background-color: rgba(45, 90, 39, 0.05);
+  transform: scale(1.01);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem !important;
+  }
+  
+  .plant-card:hover {
+    transform: translateY(-4px) !important;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .feature-icon:hover {
+    transform: none;
+  }
+  
+  .nav-link:hover {
+    transform: none;
+  }
+  
+  .navbar-brand:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 2rem 0 !important;
+    min-height: 70vh !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+  
+  .hero-image img {
+    max-width: 300px !important;
+  }
+  
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .btn,
+  .modal {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Accessibility improvements */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid #2d5a27;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-muted {
+    color: #666 !important;
+  }
+  
+  .border {
+    border-color: #000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .plant-card:hover,
+  .btn:hover,
+  .feature-icon:hover,
+  .nav-link:hover,
+  .navbar-brand:hover {
+    transform: none !important;
+  }
+}
+
+/* Custom utility classes */
+.text-green {
+  color: #2d5a27 !important;
+}
+
+.bg-green {
+  background-color: #2d5a27 !important;
+}
+
+.border-green {
+  border-color: #2d5a27 !important;
+}
+
+.shadow-green {
+  box-shadow: 0 4px 15px rgba(45, 90, 39, 0.15) !important;
+}
+
+.rounded-xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-xxl {
+  border-radius: 1.5rem !important;
+}
+
+/* Animation delays for staggered effects */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Loading states */
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Success states */
+.success-bounce {
+  animation: successBounce 0.6s ease;
+}
+
+@keyframes successBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+/* Enhanced focus indicators */
+.focus-ring:focus {
+  outline: 2px solid #2d5a27;
+  outline-offset: 4px;
+}
+
+/* Custom scrollbar for modals */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #2d5a27;
+  border-radius: 3px;
+}
+
+/* Responsive typography */
+@media (min-width: 1200px) {
+  .display-1 { font-size: 5.5rem; }
+  .display-2 { font-size: 4.5rem; }
+  .display-3 { font-size: 3.5rem; }
+}
+
+/* Grid enhancements */
+.grid-item {
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  z-index: 2;
+}
+
+/* Status indicators */
+.status-online {
+  color: #28a745;
+}
+
+.status-offline {
+  color: #dc3545;
+}
+
+.status-pending {
+  color: #ffc107;
+}
